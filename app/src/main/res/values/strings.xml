@@ -4,4 +4,5 @@
     <string name="title_activity_pot_header">PotActivityHeader</string>
 
     <string name="student_info">%1$s is %2$d years old</string>
+    <string name="type_your_name">Type your name</string>
 </resources>

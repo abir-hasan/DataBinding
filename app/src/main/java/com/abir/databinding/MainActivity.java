@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.abir.databinding.databinding.ActivityMainBinding;
+import com.abir.databinding.models.Student;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

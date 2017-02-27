@@ -18,7 +18,7 @@ public class EventHandler {
     }
 
     public void onHandleClick(View view) {
-        view.getContext().startActivity(new Intent(view.getContext(), DummyActivity.class));
+        view.getContext().startActivity(new Intent(view.getContext(), ObservableTestActivity.class));
         Toast.makeText(view.getContext(), "Opening Dummy", Toast.LENGTH_SHORT).show();
     }
 

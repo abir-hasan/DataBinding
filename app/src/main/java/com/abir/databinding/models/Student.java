@@ -1,4 +1,4 @@
-package com.abir.databinding;
+package com.abir.databinding.models;
 
 /**
  * Created by Abir Hasan on 15-Jan-17.

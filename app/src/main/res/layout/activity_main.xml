@@ -24,7 +24,7 @@
 
         <variable
             name="mStudent"
-            type="com.abir.databinding.Student" />
+            type="com.abir.databinding.models.Student" />
 
 
         <!--For sixth example-->
@@ -32,7 +32,7 @@
 
         <import type="java.util.Map" />
 
-        <import type="com.abir.databinding.Student" />
+        <import type="com.abir.databinding.models.Student" />
 
         <variable
             name="studentsList"
