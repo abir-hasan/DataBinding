@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="btnHandler"
+            type="com.abir.databinding.EventHandler" />
+
+        <variable
+            name="textOne"
+            type="String" />
+
+        <variable
+            name="textTwo"
+            type="String" />
+
+        <variable
+            name="textThree"
+            type="String" />
+
+        <variable
+            name="mStudent"
+            type="com.abir.databinding.Student" />
+
+
+        <!--For sixth example-->
+        <import type="java.util.List" />
+
+        <import type="java.util.Map" />
+
+        <import type="com.abir.databinding.Student" />
+
+        <variable
+            name="studentsList"
+            type="List&lt;Student&gt;" />
+
+        <variable
+            name="nameAndAge"
+            type="Map&lt;String,Integer&gt;" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--First Example-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bla" />
+        </LinearLayout>
+
+        <!--Second Example-->
+        <LinearLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.abir.databinding.MainActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{textOne}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{textTwo}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{textThree}" />
+        </LinearLayout>
+
+        <!--Third Example-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:imageUrl="@{mStudent.imageUrl}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{mStudent.name??`No name provided`}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(mStudent.age)}" />
+
+            <!--Fourth Example-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{btnHandler.onHandleClick}"
+                android:text="Click" />
+            <!--Fifth Example-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->btnHandler.onHandleClick(mStudent.name??`Abir`)}"
+                android:text="Event Bind Click" />
+        </LinearLayout>
+
+        <!--Sixth Example-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.abir.databinding.MainActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{studentsList[0].name}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(nameAndAge[`abir`])}" />
+
+            <!--string resource example-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/student_info(mStudent.name??`Abir`,mStudent.age)}" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
+
