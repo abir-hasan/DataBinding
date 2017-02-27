@@ -3,13 +3,18 @@
 
     <data>
 
-        <variable
+        <!--<variable
             name="model"
             type="com.abir.databinding.models.DummyModel" />
+        Only one layout element and one data element are allowed. D:-->
+
+        <variable
+            name="objesctTestModel"
+            type="com.abir.databinding.models.ObservableObjectModel" />
     </data>
 
     <!--observableFieldExample-->
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -28,7 +33,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/type_your_name"
-            android:text="@={model.name}" /> <!--special expression for two way binding-->
+            android:text="@={model.name}" /> &lt;!&ndash;special expression for two way binding&ndash;&gt;
+    </LinearLayout>-->
+
+    <!--observableObjectExample-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{objesctTestModel.name}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{objesctTestModel.address}" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/type_your_name"
+            android:text="@={objesctTestModel.name}" /> <!--special expression for two way binding-->
     </LinearLayout>
 
 </layout>
