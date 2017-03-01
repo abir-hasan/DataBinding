@@ -8,7 +8,7 @@ import android.databinding.ObservableField;
 
 public class DummyModel {
 
-    public ObservableField<String> name = new ObservableField<>();
+    public final ObservableField<String> name = new ObservableField<>();
     private String age;
 
     public void setName(String name) {
