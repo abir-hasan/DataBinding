@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.abir.databinding.ex_dynamic_data_binding.DynamicSampleActivity;
+
 /**
  * Created by Abir Hasan on 15-Jan-17.
  */
@@ -23,6 +25,7 @@ public class EventHandler {
     }
 
     public void onHandleClick(String name) {
+        context.startActivity(new Intent(context, DynamicSampleActivity.class));
         Toast.makeText(context, name, Toast.LENGTH_SHORT).show();
     }
 }
